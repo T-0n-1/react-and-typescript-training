@@ -3,15 +3,17 @@ import Alert from "./Components/Alert";
 import Button from "./Components/Button";
 
 function App() {
-  const [showAlert, setShowAlert] = useState(false);
+  const [alertVisible, setAlertVisibility] = useState(false);
 
   const handleButtonClick = () => {
-    setShowAlert(!showAlert);
+    setAlertVisibility(true);
   };
 
   return (
     <div>
-      {showAlert && <Alert>Hello World</Alert>}
+      {alertVisible && (
+        <Alert onClose={() => setAlertVisibility(false)}>Hello World</Alert>
+      )}
       <Button onClick={handleButtonClick}>Toggle Alert</Button>
     </div>
   );
