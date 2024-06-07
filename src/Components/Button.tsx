@@ -2,7 +2,16 @@ import { Children } from "react";
 
 interface Props {
   children: string;
-  color?: string;
+  color?:
+    | `primary`
+    | `secondary`
+    | `success`
+    | `danger`
+    | `warning`
+    | `info`
+    | `light`
+    | `dark`
+    | `link`;
   onClick: () => void;
 }
 
