@@ -1,20 +1,9 @@
-import React, { useState } from "react";
-import Alert from "./Components/Alert";
-import Button from "./Components/Button";
+import Like from "./Components/Like";
 
 function App() {
-  const [alertVisible, setAlertVisibility] = useState(false);
-
-  const handleButtonClick = () => {
-    setAlertVisibility(true);
-  };
-
   return (
     <div>
-      {alertVisible && (
-        <Alert onClose={() => setAlertVisibility(false)}>Hello World</Alert>
-      )}
-      <Button onClick={handleButtonClick}>Toggle Alert</Button>
+      <Like onClick={() => console.log("Clicked")} />
     </div>
   );
 }
