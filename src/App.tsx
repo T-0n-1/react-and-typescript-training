@@ -1,20 +1,18 @@
 import { useState } from "react";
 
 function App() {
-  const [game, setGame] = useState({
-    id: 1,
-    Player: {
-      name: "John",
-    },
+  const [pizza, setPizza] = useState({
+    name: "Spicy pepperoni",
+    toppings: ["mushrooms"],
   });
 
   const handleClick = () => {
-    setGame({ ...game, Player: { ...game.Player, name: "Bob" } });
+    setPizza({ ...pizza, toppings: [...pizza.toppings, "cheese"] });
   };
 
   return (
     <div>
-      <p>Exercise 1 for mutating objects</p>
+      <p>Exercise 2 for mutating objects</p>
     </div>
   );
 }
