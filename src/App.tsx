@@ -1,9 +1,20 @@
-import Like from "./Components/Like";
+import { useState } from "react";
 
 function App() {
+  const [game, setGame] = useState({
+    id: 1,
+    Player: {
+      name: "John",
+    },
+  });
+
+  const handleClick = () => {
+    setGame({ ...game, Player: { ...game.Player, name: "Bob" } });
+  };
+
   return (
     <div>
-      <Like onClick={() => console.log("Clicked")} />
+      <p>Exercise 1 for mutating objects</p>
     </div>
   );
 }
